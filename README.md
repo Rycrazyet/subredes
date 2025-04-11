@@ -1,65 +1,64 @@
 # Subnet Web Application
 
-This project is a web application designed to manage and display information about specific subnets. It features a user-friendly interface with tabs for different subnets, allowing users to view and manage IP addresses, device names, and login requirements for modifications.
+Este proyecto es una aplicación web diseñada para gestionar y mostrar información sobre subredes específicas. Presenta una interfaz fácil de usar con pestañas para diferentes subredes, permitiendo a los usuarios ver y gestionar direcciones IP, nombres de dispositivos y requisitos de acceso para modificaciones.
 
-## Project Structure
+## Estructura del Proyecto
 
-The project is organized as follows:
+El proyecto está organizado de la siguiente manera:
 
 ```
 subnet-web-app
 ├── public
-│   ├── css
-│   │   └── styles.css          # Styles for the web page
-│   ├── js
-│   │   └── scripts.js          # JavaScript for dynamic interactions
-│   └── index.html              # HTML structure with subnet tabs
+│ ├── css
+│ │ └── styles.css # Estilos para la página web
+│ ├── js
+│ │ └── scripts. js # JavaScript para interacciones dinámicas
+│ └── index.html # Estructura HTML con pestañas de subred
 ├── src
-│   ├── db
-│   │   └── database.sql        # SQL script for database setup
-│   ├── server.js               # Server setup and API handling
-│   └── routes
-│       └── api.js              # API routes for data interaction
-├── package.json                 # npm configuration and dependencies
-└── README.md                    # Project documentation
+│ ├── db
+│ │ └── base de datos. sql # Script SQL para la configuración de la base de datos
+│ ├── server.js # Configuración del servidor y manejo de la API
+│ └── rutas
+│ └── api. js # Rutas API para la interacción de datos
+├── package.json # Configuración npm y dependencias
+└── README.md # Documentación del proyecto
 ```
 
-## Features
+## Características
 
-- **Four Subnet Tabs**: Each tab corresponds to a specific subnet (10.26.1112, 10.26.118, 10.26.108, 10.26.114) and displays a table of IP addresses.
-- **IP Address Management**: Each table lists all 254 IPs in the network range, along with device names.
-- **Login Requirement**: Modifications to the data require user authentication with a username and password.
+- **Cuatro pestañas de subred**: Cada pestaña corresponde a una subred específica (10.26.1112, 10.26.118, 10.26.108, 10.26.114) y muestra una tabla de direcciones IP.
+- **Gestión de direcciones IP**: Cada tabla lista las 254 IPs en el rango de red, junto con los nombres de los dispositivos.
+- Requisito de inicio de sesión**: Las modificaciones de los datos requieren la autenticación del usuario con un nombre de usuario y una contraseña.
 
-## Setup Instructions
+## Instrucciones de instalación
 
-1. **Clone the Repository**: 
+1. **Clonar el repositorio**: 
    ```
-   git clone <repository-url>
-   cd subnet-web-app
+ git clone <url-del-repositorio>
+ cd subnet-web-app
+ ```
+
+2. **Instalar dependencias**: 
    ```
+ npm install
+ ```
 
-2. **Install Dependencies**: 
+3. **Configurar la base de datos**: 
+   - Importa el archivo `database.sql` a tu servidor MySQL para crear las tablas necesarias.
+
+4. **4. Ejecutar el servidor 
    ```
-   npm install
-   ```
+ node src/server.js
+ ```
 
-3. **Set Up the Database**: 
-   - Import the `database.sql` file into your MySQL server to create the necessary tables.
+5. **Accede a la Aplicación**: 
+   Abre tu navegador web y navega hasta `http://localhost:3000` para ver la aplicación.
 
-4. **Run the Server**: 
-   ```
-   node src/server.js
-   ```
+## Tecnologías Usadas
 
-5. **Access the Application**: 
-   Open your web browser and navigate to `http://localhost:3000` to view the application.
-
-## Technologies Used
-
-- HTML, CSS, JavaScript for the frontend
-- Node.js and Express for the backend
-- MySQL for database management
-
+- HTML, CSS, JavaScript para el frontend
+- Node.js y Express para el backend
+- MySQL para la gestión de la base de datos
 ## Contributing
 
-Contributions are welcome! Please submit a pull request or open an issue for any enhancements or bug fixes.
+¡Las contribuciones son bienvenidas! Por favor, envíe un pull request o abra un issue para cualquier mejora o corrección de errores.
